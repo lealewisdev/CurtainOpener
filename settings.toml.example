@@ -1,0 +1,10 @@
+# Change file name/extension to "settings.toml" and adjust the SSID/username/password/key to your own values
+
+CIRCUITPY_WIFI_SSID="2.4GhzWifi"
+CIRCUITPY_WIFI_PASSWORD="password"
+
+BROKER_IPv4 = "xxx.xxx.x.xxx"
+MOSQUITTO_USERNAME = "admin"
+MOSQUITTO_KEY = "password"
+
+STEPS 1
