@@ -1,8 +1,15 @@
-# CurtainOpener
+# Smart Home CurtainOpener
+
+Features
+- Command manually via integrated buttons
+- Command remotely via Homeassistant MQTT integration
+- Schedule automated opening via integrated buttons
+- Retains status in case of power off
+- Integrated StallGuard
 
 Prerequisites
 - [Mosquitto MQTT Broker](https://mosquitto.org/)
-- [Homeassistant](https://www.home-assistant.io/)
+- [Homeassistant](https://www.home-assistant.io/) with [MQTT integration](https://www.home-assistant.io/integrations/mqtt/)
 
 Parts List
 - [Adafruit ESP32-S3 Reverse TFT Feather](https://thepihut.com/products/adafruit-esp32-s3-reverse-tft-feather-4mb-flash-2mb-psram-stemma-qt)
@@ -18,3 +25,4 @@ Instructions
 - Clone repository onto Microcontroller
 - Rename 'settings.toml.example' to 'settings.toml' and insert your Wifi and MQTT credentials
 - Connect Microcontroller, Driver, Motor and Power Supply according to the [instructions provided by adafruit](https://learn.adafruit.com/adafruit-tmc2209-stepper-motor-driver-breakout-board/circuitpython-and-python)
+- Configure the Homeassistant MQTT integration with the topic 'curtain', payloads 'OPEN' and 'CLOSE' as well as the states 'OPENED' and 'CLOSED'
